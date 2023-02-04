@@ -7,7 +7,8 @@ import {
     Input,
     Radio,
     Button,
-    Chip
+    Chip,
+    Textarea
 } from "@material-tailwind/react";
 import { CheckIcon, XMarkIcon } from '@heroicons/react/24/outline';
 export default function NewQuizPage() {
@@ -181,6 +182,10 @@ export default function NewQuizPage() {
                             <div className="w-100 pb-6">
 
                                 <Input name="title" variant="outlined" label="Title" value={data.title} onChange={handleChanges} />
+                            </div>
+                            <div className="w-100 pb-6">
+
+                                <Textarea name="description" variant="outlined" label="Description" value={data.description} onChange={handleChanges} />
                             </div>
                             <div className="w-100">
                                 <Input variant="outlined" label="Url" value={data.url} name="url" onChange={handleChanges} />
